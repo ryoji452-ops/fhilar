@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #f08080 0%,
+    #f4a0a0 15%,
+    #f7bfb0 35%,
+    #fad5b0 55%,
+    #fce8c8 75%,
+    #fef5d8 100%
+  );
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 520px;
+  padding: 40px 20px;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Logo Circle ── */
+.logo-circle {
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 28px rgba(200, 80, 110, 0.15);
+  border: 2.5px solid #7b5ea7;
+}
+
+.logo-img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* ── Form Box ── */
+.form-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 0 30px;
+}
+
+.field-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #a01850;
+  text-transform: uppercase;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+input {
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255, 230, 215, 0.75);
+  font-size: 1rem;
+  color: #b05070;
+  outline: none;
+  transition: box-shadow 0.25s;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px rgba(220, 100, 130, 0.25);
+}
+
+/* ── Error ── */
+.error-msg {
+  color: #cc2244;
+  font-size: 0.82rem;
+  min-height: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+/* ── Buttons ── */
+.btn-row {
+  display: flex;
+  gap: 28px;
+  margin-top: 16px;
+  align-self: center;
+}
+
+.btn {
+  padding: 20px 60px;
+  border: none;
+  border-radius: 20px;
+  background: #f4a0b8;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  font-family: 'Didact Gothic', sans-serif;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(220, 100, 140, 0.25);
+}
+
+.btn:hover {
+  background: #e8809c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(220, 100, 140, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+/* ── Choice Buttons (User Type) ── */
+.choice-group {
+  display: flex;
+  gap: 12px;
+}
+
+.choice-btn {
+  flex: 1;
+  padding: 14px 0;
+  border: 2px solid rgba(220, 100, 130, 0.35);
+  border-radius: 50px;
+  background: rgba(255, 230, 215, 0.75);
+  color: #b05070;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-family: 'Didact Gothic', sans-serif;
+  transition: all 0.2s;
+}
+
+.choice-btn:hover {
+  background: rgba(244, 160, 184, 0.4);
+  border-color: #e8809c;
+  color: #a01850;
+}
+
+.choice-btn.active {
+  background: #f4a0b8;
+  border-color: #e8809c;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(220, 100, 140, 0.3);
+}

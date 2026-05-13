@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FHILAR - Login</title>
+  <link rel="stylesheet" href="login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo-circle">
+      <img src="../assets/images/fhilar.jpg" alt="FHILAR Logo" class="logo-img" />
+    </div>
+
+    <div class="form-box">
+
+      <div class="field-group">
+        <label>USER TYPE:</label>
+        <div class="choice-group">
+          <button class="choice-btn" data-value="admin">Admin</button>
+          <button class="choice-btn" data-value="user">User</button>
+        </div>
+        <input type="hidden" id="userType" />
+      </div>
+
+      <div class="field-group">
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email" placeholder="" />
+      </div>
+
+      <div class="field-group">
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" placeholder="" />
+      </div>
+
+      <p class="error-msg" id="errorMsg"></p>
+
+      <div class="btn-row">
+        <button class="btn" id="loginBtn">LOGIN</button>
+        <button class="btn" id="registerBtn">REGISTER</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
