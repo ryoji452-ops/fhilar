@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FHILAR - Product Information</title>
+  <link rel="stylesheet" href="product-information.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="../assets/images/sidebar-logo.jpg" alt="FHILAR Logo" class="sidebar-logo-img" />
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-btn" data-page="dashboard">DASHBOARD</button>
+        <button class="nav-btn" data-page="product-management">PRODUCT<br>MANAGEMENT</button>
+        <button class="nav-btn active" data-page="product-information">PRODUCT<br>INFORMATION</button>
+        <button class="nav-btn" data-page="size-management">SIZE MANAGEMENT</button>
+        <button class="nav-btn" data-page="stocks">STOCKS</button>
+        <button class="nav-btn" data-page="reports">REPORTS</button>
+        <button class="nav-btn" data-page="transaction-history">TRANSACTION<br>HISTORY</button>
+        <button class="nav-btn" data-page="accounts">ACCOUNTS</button>
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+      <div class="dashboard-header">
+        <h1 class="dash-title">Product Information</h1>
+        <p class="dash-subtitle">Forever Your Girl</p>
+      </div>
+
+      <!-- ── Info Panel ── -->
+      <div class="info-panel">
+
+        <!-- PRODUCT NAME -->
+        <div class="info-field-group">
+          <label class="info-label">PRODUCT NAME:</label>
+          <input type="text" class="info-input" id="productNameInput" placeholder="product name here" />
+        </div>
+
+        <!-- SIZE -->
+        <div class="info-field-group">
+          <label class="info-label">SIZE:</label>
+          <input type="text" class="info-input" id="sizeInput" placeholder="size here" />
+        </div>
+
+        <!-- COLOR -->
+        <div class="info-field-group">
+          <label class="info-label">COLOR:</label>
+          <input type="text" class="info-input" id="colorInput" placeholder="color here" />
+        </div>
+
+        <!-- Feedback -->
+        <p class="feedback-msg" id="feedbackMsg"></p>
+
+        <!-- VIEW PRODUCTS button (bottom right) -->
+        <div class="info-btn-row">
+          <button class="info-btn btn-view" id="viewBtn">VIEW PRODUCTS</button>
+        </div>
+
+      </div>
+
+      <!-- ── Products Info Table (shown after VIEW) ── -->
+      <div class="products-table-wrap" id="productsTableWrap" style="display:none;">
+        <h2 class="table-title">Product Information</h2>
+        <table class="products-table" id="productsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product Name</th>
+              <th>Size</th>
+              <th>Color</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productsTableBody"></tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="product-information.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FHILAR - Product Information</title>
+  <link rel="stylesheet" href="product-information.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="../assets/images/sidebar-logo.jpg" alt="FHILAR Logo" class="sidebar-logo-img" />
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-btn" data-page="dashboard">DASHBOARD</button>
+        <button class="nav-btn" data-page="product-management">PRODUCT<br>MANAGEMENT</button>
+        <button class="nav-btn active" data-page="product-information">PRODUCT<br>INFORMATION</button>
+        <button class="nav-btn" data-page="size-management">SIZE MANAGEMENT</button>
+        <button class="nav-btn" data-page="stocks">STOCKS</button>
+        <button class="nav-btn" data-page="reports">REPORTS</button>
+        <button class="nav-btn" data-page="transaction-history">TRANSACTION<br>HISTORY</button>
+        <button class="nav-btn" data-page="accounts">ACCOUNTS</button>
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+      <div class="dashboard-header">
+        <h1 class="dash-title">Product Information</h1>
+        <p class="dash-subtitle">Forever Your Girl</p>
+      </div>
+
+      <!-- ── Info Panel ── -->
+      <div class="info-panel">
+
+        <!-- PRODUCT NAME -->
+        <div class="info-field-group">
+          <label class="info-label">PRODUCT NAME:</label>
+          <input type="text" class="info-input" id="productNameInput" placeholder="product name here" />
+        </div>
+
+        <!-- SIZE -->
+        <div class="info-field-group">
+          <label class="info-label">SIZE:</label>
+          <input type="text" class="info-input" id="sizeInput" placeholder="size here" />
+        </div>
+
+        <!-- COLOR -->
+        <div class="info-field-group">
+          <label class="info-label">COLOR:</label>
+          <input type="text" class="info-input" id="colorInput" placeholder="color here" />
+        </div>
+
+        <!-- Feedback -->
+        <p class="feedback-msg" id="feedbackMsg"></p>
+
+        <!-- VIEW PRODUCTS button (bottom right) -->
+        <div class="info-btn-row">
+          <button class="info-btn btn-view" id="viewBtn">VIEW PRODUCTS</button>
+        </div>
+
+      </div>
+
+      <!-- ── Products Info Table (shown after VIEW) ── -->
+      <div class="products-table-wrap" id="productsTableWrap" style="display:none;">
+        <h2 class="table-title">Product Information</h2>
+        <table class="products-table" id="productsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product Name</th>
+              <th>Size</th>
+              <th>Color</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productsTableBody"></tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="product-information.js"></script>
+</body>
+</html>
