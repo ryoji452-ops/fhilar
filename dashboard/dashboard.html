@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FHILAR - Inventory Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-crop" id="logoCrop"></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-btn active" data-page="dashboard">DASHBOARD</button>
+        <button class="nav-btn" data-page="product-management">PRODUCT<br>MANAGEMENT</button>
+        <button class="nav-btn" data-page="product-information">PRODUCT<br>INFORMATION</button>
+        <button class="nav-btn" data-page="size-management">SIZE MANAGEMENT</button>
+        <button class="nav-btn" data-page="stocks">STOCKS</button>
+        <button class="nav-btn" data-page="reports">REPORTS</button>
+        <button class="nav-btn" data-page="transaction-history">TRANSACTION<br>HISTORY</button>
+        <button class="nav-btn" data-page="accounts">ACCOUNTS</button>
+      </nav>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+      <div class="dashboard-header">
+        <h1 class="dash-title">Inventory Dashboard</h1>
+        <p class="dash-subtitle">Forever Your Girl</p>
+      </div>
+
+      <div class="dashboard-grid">
+
+        <!-- Top Selling Items -->
+        <div class="dash-card card-top-selling">
+          <h2 class="card-label">TOP SELLING ITEMS</h2>
+          <div class="card-body" id="topSellingBody">
+            <p class="card-empty">No data available.</p>
+          </div>
+        </div>
+
+        <!-- Low Stocks -->
+        <div class="dash-card card-low-stocks">
+          <h2 class="card-label">LOW STOCKS</h2>
+          <div class="card-body" id="lowStocksBody">
+            <p class="card-empty">No data available.</p>
+          </div>
+        </div>
+
+        <!-- Total Sales -->
+        <div class="dash-card card-total-sales">
+          <h2 class="card-label">TOTAL SALES</h2>
+          <div class="card-body" id="totalSalesBody">
+            <p class="card-value" id="totalSalesValue">₱ 0.00</p>
+          </div>
+        </div>
+
+        <!-- Total Stocks -->
+        <div class="dash-card card-total-stocks">
+          <h2 class="card-label">TOTAL STOCKS</h2>
+          <div class="card-body" id="totalStocksBody">
+            <p class="card-value" id="totalStocksValue">0</p>
+          </div>
+        </div>
+
+        <!-- Total Products -->
+        <div class="dash-card card-total-products">
+          <h2 class="card-label">TOTAL PRODUCTS</h2>
+          <div class="card-body" id="totalProductsBody">
+            <p class="card-value" id="totalProductsValue">0</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
