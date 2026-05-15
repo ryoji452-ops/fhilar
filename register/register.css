@@ -11,15 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    to bottom,
-    #f08080 0%,
-    #f4a0a0 15%,
-    #f7bfb0 35%,
-    #fad5b0 55%,
-    #fce8c8 75%,
-    #fef5d8 100%
-  );
+  background: url('../assets/images/background.jpg') center center / cover no-repeat fixed;
   font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -49,7 +41,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 28px rgba(200, 80, 110, 0.15);
-  border: 2.5px solid #7b5ea7;
+  border: none;
 }
 
 .logo-img {
@@ -106,11 +98,11 @@ label {
 input {
   width: 100%;
   padding: 16px 24px;
-  border: none;
+  border: 1.5px solid rgba(180, 40, 80, 0.35);
   border-radius: 50px;
-  background: rgba(255, 230, 215, 0.75);
+  background: rgba(255, 255, 255, 0.55);
   font-size: 1rem;
-  color: #b05070;
+  color: #7a1535;
   outline: none;
   transition: box-shadow 0.25s;
   font-family: 'Didact Gothic', sans-serif;
@@ -125,9 +117,9 @@ select {
   padding: 16px 24px;
   border: none;
   border-radius: 50px;
-  background: rgba(255, 230, 215, 0.75);
+  background: rgba(255, 255, 255, 0.55);
   font-size: 1rem;
-  color: #b05070;
+  color: #7a1535;
   outline: none;
   cursor: pointer;
   appearance: none;
@@ -145,7 +137,7 @@ select:focus {
 
 select option {
   background: #fff0f0;
-  color: #b05070;
+  color: #7a1535;
 }
 
 /* ── Messages ── */
@@ -174,7 +166,7 @@ select option {
   padding: 20px 60px;
   border: none;
   border-radius: 20px;
-  background: #f4a0b8;
+  background: #d63a6a;
   color: #ffffff;
   font-size: 1.05rem;
   font-weight: 700;
@@ -186,7 +178,7 @@ select option {
 }
 
 .btn:hover {
-  background: #e8809c;
+  background: #b8285a;
   transform: translateY(-2px);
   box-shadow: 0 6px 22px rgba(220, 100, 140, 0.35);
 }
@@ -212,8 +204,8 @@ select option {
   padding: 14px 0;
   border: 2px solid rgba(220, 100, 130, 0.35);
   border-radius: 50px;
-  background: rgba(255, 230, 215, 0.75);
-  color: #b05070;
+  background: rgba(255, 255, 255, 0.55);
+  color: #7a1535;
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -229,7 +221,7 @@ select option {
 }
 
 .choice-btn.active {
-  background: #f4a0b8;
+  background: #d63a6a;
   border-color: #e8809c;
   color: #ffffff;
   box-shadow: 0 4px 14px rgba(220, 100, 140, 0.3);
