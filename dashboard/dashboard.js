@@ -1,59 +1,5 @@
 // ── FHILAR Dashboard Logic ──
 
-// ── Smart Logo Crop: detect FHILAR text row via canvas pixel scan ──
-(function autoLogoCrop() {
-  const IMG_SRC = '../assets/images/fhilar.jpg';
-  const CROP_W  = 210;
-  const CROP_H  = 88;
-
-  const img = new Image();
-  img.crossOrigin = 'anonymous';
-  img.onload = function () {
-    try {
-      // Draw image onto offscreen canvas
-      const canvas = document.createElement('canvas');
-      canvas.width  = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
-
-      const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-      const W = canvas.width, H = canvas.height;
-
-      // Find the row with the most dark-pink/red pixels (the FHILAR text)
-      // Target: R > 140, G < 80, B < 100  (deep pink / crimson range)
-      let bestRow = 0, bestCount = 0;
-      for (let y = 0; y < H; y++) {
-        let count = 0;
-        for (let x = 0; x < W; x++) {
-          const i = (y * W + x) * 4;
-          const r = data[i], g = data[i+1], b = data[i+2];
-          if (r > 130 && g < 90 && b < 110) count++;
-        }
-        if (count > bestCount) { bestCount = count; bestRow = y; }
-      }
-
-      // Center the crop strip around bestRow, scaled to CROP_W width
-      const scale      = CROP_W / W;
-      const scaledH    = H * scale;
-      const textY      = bestRow * scale;
-      // Place text row at 55% height of the crop box
-      const bgOffsetY  = Math.round((CROP_H * 0.55) - textY);
-      const clampedY   = Math.min(0, Math.max(bgOffsetY, CROP_H - scaledH));
-
-      const logoCrop = document.getElementById('logoCrop');
-      if (logoCrop) {
-        logoCrop.style.backgroundSize     = `${CROP_W}px auto`;
-        logoCrop.style.backgroundPosition = `center ${clampedY}px`;
-      }
-    } catch (e) {
-      // CORS or tainted canvas — fall back to CSS default (top)
-    }
-  };
-  img.onerror = function () { /* image not found — leave CSS default */ };
-  img.src = IMG_SRC;
-})();
-
 // ── Sidebar Navigation ──
 const navBtns = document.querySelectorAll('.nav-btn');
 navBtns.forEach(btn => {

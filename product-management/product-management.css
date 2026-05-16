@@ -42,16 +42,12 @@ body {
   width: 100%;
 }
 
-.logo-crop {
+.sidebar-logo-img {
   width: 210px;
-  height: 88px;
-  overflow: hidden;
+  height: auto;
   border-radius: 14px;
-  background-color: white;
-  background-image: url('../assets/images/fhilar.jpg');
-  background-repeat: no-repeat;
-  background-size: 210px auto;
-  background-position: center top;
+  object-fit: contain;
+  display: block;
 }
 
 .sidebar-nav {
@@ -195,9 +191,7 @@ body {
   box-shadow: 0 0 0 3px rgba(220, 100, 130, 0.22);
 }
 
-.mgmt-input::placeholder {
-  color: #aaa;
-}
+.mgmt-input::placeholder { color: #aaa; }
 
 /* ── Buttons ── */
 .mgmt-btn {
